@@ -1,0 +1,28 @@
+[project]
+name = "codon-server"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Mori", email = "154768101+moriT958@users.noreply.github.com" }
+]
+dependencies = []
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "fastapi>=0.112.1",
+    "uvicorn>=0.30.6",
+    "ruff>=0.6.2",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/codon_server"]
